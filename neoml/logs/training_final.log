@@ -1,0 +1,47 @@
+======================================================================
+NEOTIMMUML - TRAINING MODELS
+======================================================================
+
+[1/5] Loading data...
+✓ Loaded 154,769 samples
+
+[2/5] Encoding features (sparse)...
+✓ Encoded to 262,228 features (sparse format)
+✓ Memory efficiency: 0.02% non-zero
+✓ Split: 123,815 train / 30,954 test
+
+[3/5] Training models...
+  [1/3] Random Forest (100 trees)... ✓
+  [2/3] LightGBM (100 trees)... ✓
+  [3/3] XGBoost (100 trees)... ✓
+
+[4/5] Creating output directories...
+  ✓ output/RandomForest/
+  ✓ output/LightGBM/
+  ✓ output/XGBoost/
+
+[5/5] Saving models and encoder...
+  ✓ output/RandomForest/model.joblib
+  ✓ output/LightGBM/model.joblib
+  ✓ output/XGBoost/model.joblib
+  ✓ output/encoder.joblib (required for inference)
+
+[6/6] Evaluating models on test set...
+----------------------------------------------------------------------
+Random Forest       : Acc=0.6911 | AUC=0.9942 | F1=0.0000
+LightGBM            : Acc=1.0000 | AUC=1.0000 | F1=1.0000
+XGBoost             : Acc=1.0000 | AUC=1.0000 | F1=1.0000
+
+======================================================================
+✓ ALL COMPLETE!
+✓ Models saved in: /Users/vanetten/git_repos/neorefine/neoml/output
+✓ Directory structure:
+    output/
+    ├── encoder.joblib (OneHotEncoder for inference)
+    ├── RandomForest/
+    │   └── model.joblib
+    ├── LightGBM/
+    │   └── model.joblib
+    └── XGBoost/
+        └── model.joblib
+======================================================================

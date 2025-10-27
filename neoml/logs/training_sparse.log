@@ -1,0 +1,26 @@
+======================================================================
+NEOTIMMUML - TRAINING MODELS
+======================================================================
+
+[1/5] Loading data...
+✓ Loaded 154,769 samples
+
+[2/5] Encoding features...
+Traceback (most recent call last):
+  File "/Users/vanetten/git_repos/neorefine/neoml/train_models.py", line 141, in <module>
+    main()
+    ~~~~^^
+  File "/Users/vanetten/git_repos/neorefine/neoml/train_models.py", line 36, in main
+    X_sparse = sparse.csr_matrix(X.sparse.to_coo())
+                                 ^^^^^^^^
+  File "/Users/vanetten/git_repos/neorefine/.venv/lib/python3.13/site-packages/pandas/core/generic.py", line 6321, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/Users/vanetten/git_repos/neorefine/.venv/lib/python3.13/site-packages/pandas/core/accessor.py", line 224, in __get__
+    accessor_obj = self._accessor(obj)
+  File "/Users/vanetten/git_repos/neorefine/.venv/lib/python3.13/site-packages/pandas/core/arrays/sparse/accessor.py", line 31, in __init__
+    self._validate(data)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "/Users/vanetten/git_repos/neorefine/.venv/lib/python3.13/site-packages/pandas/core/arrays/sparse/accessor.py", line 249, in _validate
+    raise AttributeError(self._validation_msg)
+AttributeError: Can only use the '.sparse' accessor with Sparse data.
